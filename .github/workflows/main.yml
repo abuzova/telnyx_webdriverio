@@ -40,22 +40,31 @@ jobs:
       
 
       # Install the newman command line utility and also install the html extra reporter
-      - name: Install newman
-        run: |
-          npm install -g newman
-          npm install -g newman-reporter-htmlextra
+      #- name: Install newman
+      #  run: |
+      #    npm install -g newman
+      #    npm install -g newman-reporter-htmlextra
 
+      # Install webdriver.io
+      - name: Install webdriver.io
+        run: npm init wdio ./telnux_webdriverio
 
-      # Make directory to upload the test results
-      - name: Make Directory for results
-        run: mkdir -p docs
+      # Install allure webdriverIO package from npm
+      - name: Install allure webdriverIO package from npm
+        run: npm install @wdio/allure-reporter --save-dev
 
+      # Install Allure-reporter
+      - name: Install Allure-reporter
+        run: npm i allure-commandline
 
-      # Run the POSTMAN collection
-      - name: Run POSTMAN collection
-        run: |
-          newman run petstore.collection.json -r htmlextra --reporter-htmlextra-export index.html --reporter-htmlextra-darkTheme  > runreport1.html || true
-               
+      # Run webdriver.io
+      - name: Run webdriver.io
+        run: npm run wdio 
+
+      # Run Allure-reporter
+      - name: Run Allure-reporter
+        run: npm run allurereport
+     
           
       # Upload the contents of Test Results directory to workspace
       - name: Output the run Details
