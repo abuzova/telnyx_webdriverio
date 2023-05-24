@@ -22,7 +22,7 @@ concurrency:
       
 jobs:
  websites-tests:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
           
           
     steps:
