@@ -63,8 +63,8 @@ jobs:
       # name: Running E2E tests
 
       # Install webdriver.io
-      - name: Install webdriver.io
-        run: npm init wdio ./telnux_webdriverio
+      #- name: Install webdriver.io
+      #  run: npm init wdio ./telnux_webdriverio
 
       # Install allure webdriverIO package from npm
       - name: Install allure webdriverIO package from npm
@@ -76,8 +76,8 @@ jobs:
 
       # Run webdriver.io
       - name: Run webdriver.io
-        # run: npm run wdio 
-        run: BROWSERSTACK_USERNAME=${{secrets.BROWSERSTACK_USERNAME}} BROWSERSTACK_ACCESS_KEY=${{secrets.BROWSERSTACK_ACCESS_KEY}} npm run test
+        run: npm run wdio 
+        # run: BROWSERSTACK_USERNAME=${{secrets.BROWSERSTACK_USERNAME}} BROWSERSTACK_ACCESS_KEY=${{secrets.BROWSERSTACK_ACCESS_KEY}} npm run test
 
       # Run Allure-reporter
       - name: Run Allure-reporter
