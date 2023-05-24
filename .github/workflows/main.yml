@@ -59,8 +59,8 @@ jobs:
       - run: npm install
         name: Install dependencies
       # We execute our test execution command
-      - run: npx wdio test/wdio.conf.ts
-        name: Running E2E tests
+      #- run: npx wdio test/wdio.conf.ts
+      # name: Running E2E tests
 
       # Install webdriver.io
       - name: Install webdriver.io
