@@ -22,7 +22,7 @@ concurrency:
       
 jobs:
  websites-tests:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
           
           
     steps:
@@ -44,6 +44,23 @@ jobs:
       #  run: |
       #    npm install -g newman
       #    npm install -g newman-reporter-htmlextra
+
+      # We install necessary drivers so we can run our tests
+      - name: Install Chromium
+        run: sudo apt-get install chromium-browser
+      # We need to checkout current branch
+      - uses: actions/checkout@v2
+      # As it's a NodeJS project, we need to setup NodeJS into our enviornement
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 18.x
+      # We did not check node_modules directory to GitHub so we need to install dependencies
+      - run: npm install
+        name: Install dependencies
+      # We execute our test execution command
+      - run: npx wdio test/wdio.conf.ts
+        name: Running E2E tests
 
       # Install webdriver.io
       - name: Install webdriver.io
