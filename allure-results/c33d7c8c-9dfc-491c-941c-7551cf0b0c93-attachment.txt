@@ -1,0 +1,5 @@
+{
+  "error": "no such element",
+  "message": "no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"div button[type=\"button\"] svg[aria-describedby=\"close\"]\"}\n  (Session info: chrome=113.0.5672.127)",
+  "stacktrace": "Backtrace:\n\tGetHandleVerifier [0x00848893+48451]\n\t(No symbol) [0x007DB8A1]\n\t(No symbol) [0x006E5058]\n\t(No symbol) [0x00710467]\n\t(No symbol) [0x0071069B]\n\t(No symbol) [0x0073DD92]\n\t(No symbol) [0x0072A304]\n\t(No symbol) [0x0073C482]\n\t(No symbol) [0x0072A0B6]\n\t(No symbol) [0x00707E08]\n\t(No symbol) [0x00708F2D]\n\tGetHandleVerifier [0x00AA8E3A+2540266]\n\tGetHandleVerifier [0x00AE8959+2801161]\n\tGetHandleVerifier [0x00AE295C+2776588]\n\tGetHandleVerifier [0x008D2280+612144]\n\t(No symbol) [0x007E4F6C]\n\t(No symbol) [0x007E11D8]\n\t(No symbol) [0x007E12BB]\n\t(No symbol) [0x007D4857]\n\tBaseThreadInitThunk [0x75BF00C9+25]\n\tRtlGetAppContainerNamedObjectPath [0x77C57B4E+286]\n\tRtlGetAppContainerNamedObjectPath [0x77C57B1E+238]\n"
+}

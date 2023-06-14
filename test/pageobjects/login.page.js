@@ -1,6 +1,4 @@
-
-
-import Page from './page.js';
+import Page from './Page.js';
 
 /**
  * sub page containing specific selectors and methods for a specific page
@@ -9,34 +7,51 @@ class LoginPage extends Page {
     /**
      * define selectors using getter methods
      */
-    get inputUsername () {
-        return $('#username');
+    get businessEmailInput() {
+        return $('form div div:nth-child(1) label input[name="email"]');
     }
 
-    get inputPassword () {
-        return $('#password');
+    get passwordInput() {
+        return $('form div div:nth-child(2) label input[name="password"]');
     }
 
-    get btnSubmit () {
+    get rememberMeInput() {
+        return $('form div div:nth-child(3) label input[name="remember_me"]');
+    }
+
+    get rememberMeLabel() {
+        return $('form div div:nth-child(3) label');
+    }
+
+    get logInBtn() {
         return $('button[type="submit"]');
+    }   
+
+    async setBusinessEmail(emailValue){
+        await this.businessEmailInput.setValue(emailValue);
+        await expect(await this.businessEmailInput).toHaveValue(emailValue, { ignoreCase: true });
     }
 
-    /**
-     * a method to encapsule automation code to interact with the page
-     * e.g. to login using username and password
-     */
-    async login (username, password) {
-        await this.inputUsername.setValue(username);
-        await this.inputPassword.setValue(password);
-        await this.btnSubmit.click();
+    async setPassword(passwordValue){
+        await this.passwordInput.setValue(passwordValue);
+        await expect(await this.passwordInput).toHaveValue(passwordValue);
+    }
+
+    async checkRememberMe(){
+        await this.rememberMeLabel.click();  
+        await expect(this.rememberMeInput).toBeChecked();
+    }
+
+    async clickLogIn(){
+        await this.logInBtn.click();
     }
 
     /**
      * overwrite specific options to adapt it to page object
      */
     open () {
-        return super.open('login');
-    }
+        return super.open('');
+    }   
 }
 
 export default new LoginPage();
