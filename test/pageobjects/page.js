@@ -8,6 +8,14 @@ export default class Page {
     * @param path path of the sub page (e.g. /path/to/page.html)
     */
     open (path) {
-        return browser.url(`https://the-internet.herokuapp.com/${path}`)
+        return browser.url(`https://telnyx.com/${path}`);
     }
+
+    get closeButton(){
+        return $('div button[type="button"] svg[aria-describedby="close"]');
+    }
+
+    async clickCloseButton(){
+        await this.closeButton.click();
+    }   
 }
