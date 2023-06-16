@@ -14,19 +14,16 @@ describe('My Login application', () => {
         await ContactUsPage.setHowHelp(Constants.HOW_HELP);
         await ContactUsPage.setFirstName(Constants.FIRST_NAME);
         await ContactUsPage.setLastName(Constants.LAST_NAME);
-        await ContactUsPage.setInputPassword(Constants.PASSWORD);
+       //await ContactUsPage.setInputPassword(Constants.PASSWORD);
         await ContactUsPage.setEmail(Constants.COMPANY_EMAIL);
         await ContactUsPage.setCountry(Constants.COUNTRY);
         await ContactUsPage.setPhoneNumber(Constants.PHONE_NUMBER);
         await ContactUsPage.setCompanyWebsite(Constants.COMPANY_WEB_SITE);
         await ContactUsPage.setPrimaryInterest(Constants.PRIMARY_INTEREST);
+        await ContactUsPage.setPleaseDescribeRequest(Constants.DESCRIBE_REQUEST);
         await ContactUsPage.setHowDidYouHear(Constants.HOW_DID_YOU_HEAR);
         await ContactUsPage.checkSubscription();
         // await ContactUsPage.clickSubmit();
 
     })
-
-    it.only('Verify contact us form with valid credentials', async () => {
-
-     })
 })

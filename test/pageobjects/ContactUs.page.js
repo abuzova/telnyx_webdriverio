@@ -19,9 +19,9 @@ class ContactUsPage extends Page {
         return $('input[name="LastName"]');
     }
 
-    get passwordInput() {
+    /*get passwordInput() {
         return $('name="LastName"');
-    }
+    }*/
 
     get emailInput() {
         return $('input[name="Email"]');
@@ -43,6 +43,10 @@ class ContactUsPage extends Page {
         return $('select[name="Use_Case_Form__c"]');
     }
 
+    get pleaseDescribeRequestInput(){
+        return $('textarea[name="Form_Additional_Information__c"]');
+    }
+
     get howDidYouHearInput() {
         return $('input[name="How_did_you_hear_about_Telnyx_Open__c"]');
     }
@@ -52,7 +56,7 @@ class ContactUsPage extends Page {
     }
 
     get subscriptionLable() { 
-        return $('lable[for="mktoCheckbox_13620_0"]');
+        return $('label[for="mktoCheckbox_13620_0"]');
     }
 
     get submitBtn() {
@@ -84,9 +88,9 @@ class ContactUsPage extends Page {
         await expect(await this.lastNameInput).toHaveValue(lastNameValue);
     }    
 
-    async setInputPassword(inputPasswordValue){
-        await this.passwordInput.setValue(inputPasswordValue);
-        await expect(await this.passwordInput).toHaveValue(inputPasswordValue);        
+    async setPleaseDescribeRequest(describeRequestValue){
+        await this.pleaseDescribeRequestInput.setValue(describeRequestValue);
+        await expect(await this.pleaseDescribeRequestInput).toHaveValue(describeRequestValue);        
     }
 
     async setEmail(emailValue) {
