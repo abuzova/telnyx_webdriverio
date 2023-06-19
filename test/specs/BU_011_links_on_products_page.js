@@ -13,6 +13,7 @@ describe('My Login application', () => {
         await HeaderPage.clickProductsLinkMenuItem();
         await HeaderPage.clickProductsSeeAllProductsSubMenuItem();
 
+        
         await PartnershipsPage.setFirstName(Constants.FIRST_NAME);
         await PartnershipsPage.setLastName(Constants.LAST_NAME);
         await PartnershipsPage.setCompany(Constants.COMPANY);
