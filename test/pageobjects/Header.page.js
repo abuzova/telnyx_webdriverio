@@ -67,7 +67,11 @@ class HeaderPage extends Page {
         return $('//header/div/div/div/nav//a/span[text()="Partners"]');
     }
 
-    get partnersSubBLock(){
+    get missionControlWhyTelnyxSubMenuItem(){
+        return $('//header/div/div/div/nav//a/span[text()="Mission Control"]');
+    }
+
+    get whyTelnyxSubBLock(){
         return $('header div>nav div:nth-child(11) div[data-radix-popper-content-wrapper]');
     }
 
@@ -128,10 +132,15 @@ class HeaderPage extends Page {
         await this.partnersWhyTelnyxSubMenuItem.click();
         await expect(browser).toHaveUrlContaining('/partnerships'); 
     }
+    
+    async clickMissionControlWhyTelnyxSubMenuItem(){
+        await this.missionControlWhyTelnyxSubMenuItem.click();
+        await expect(browser).toHaveUrlContaining('/mission-control');
+    }
 
-    async clickPartnersLinkMenuItem(){
+    async clickWhyTelnyxLinkMenuItem(){
         await this.whyTelnyxMenuItem.click();
-        await this.partnersSubBLock.isExisting();
+        await this.whyTelnyxSubBLock.isExisting();
     }
 
     /*open () {
