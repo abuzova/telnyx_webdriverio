@@ -38,6 +38,8 @@ class HeaderPage extends Page {
         return $('header div>nav div:nth-child(2) div[data-radix-popper-content-wrapper]');
     }
 
+    // /products/sip-trunks
+
     // Pricing
     get pricingLinkMenuItem(){
         return $('//header/div/div/div/nav//button/div/span[text()="Pricing"]');
