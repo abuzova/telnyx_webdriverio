@@ -47,6 +47,10 @@ class HeaderPage extends Page {
         return $('//header/div/div/div/nav//a/span[text()="SIP Trunking"]');
     }
 
+    get pricingSeeAllPricingSubMenuItem(){
+        return $('//header/div/div/div/nav//a/span[text()="See all pricing"]');
+    }
+
     get pricingSubBlock(){
         return $('header div>nav div:nth-child(7) div[data-radix-popper-content-wrapper]');
     }    
@@ -99,7 +103,12 @@ class HeaderPage extends Page {
     async clickPricingSIPTrunkingSubMenuItem(){
         await this.pricingSIPTrunkingSubMenuItem.click();
         await expect(browser).toHaveUrlContaining('/pricing/elastic-sip'); 
-    }   
+    } 
+    
+    async clickPricingSeeAllPricingSubMenuItem(){
+        await this.pricingSeeAllPricingSubMenuItem.click();
+        await expect(browser).toHaveUrlContaining('/pricing'); 
+    }
 
     // Products
     async clickProductsLinkMenuItem(){
