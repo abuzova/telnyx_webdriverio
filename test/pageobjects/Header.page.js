@@ -71,6 +71,20 @@ class HeaderPage extends Page {
         return $('header div>nav div:nth-child(11) div[data-radix-popper-content-wrapper]');
     }
 
+    // Resources
+
+    get resourcesMenuItem(){
+        return $('//header/div/div/div/nav//button/div/span[text()="Resources"]/parent::div/parent::button');
+    }
+
+    get blogResourcesSubMenuItem(){
+        return $('//header/div/div/div/nav//a/span[text()="Blog"]');
+    }
+
+    get resourcesSubBlock(){
+        return $('header div>nav div:nth-child(14) div[data-radix-popper-content-wrapper]');
+    }
+
     async clickLogIn(){
         await this.logInLink.click();
         await browser.switchWindow('Telnyx Customer Portal'); 
@@ -132,6 +146,19 @@ class HeaderPage extends Page {
     async clickPartnersLinkMenuItem(){
         await this.whyTelnyxMenuItem.click();
         await this.partnersSubBLock.isExisting();
+    }
+
+    
+    // Resources
+
+    async clickBlogResourcesSubMenuItem(){
+        await this.blogResourcesSubMenuItem.click();
+        await expect(browser).toHaveUrlContaining('/resources'); 
+    }
+
+    async clickResourcesLinkMenuItem(){
+        await this.resourcesMenuItem.click();
+        await this.resourcesSubBlock.isExisting();
     }
 
     /*open () {
