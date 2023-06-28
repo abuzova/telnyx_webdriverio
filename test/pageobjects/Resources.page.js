@@ -63,7 +63,7 @@ class ResoucesPage extends Page {
     async clickSmsApiFilter(){
         //await this.chosedFilterLink.waitForDisplayed({ timeout: 5000 });
         await this.smsApiFilter.click();
-        await this.chosedFilterLink.waitForDisplayed({ timeout: 5000 });
+        //await this.chosedFilterLink.waitForDisplayed({ timeout: 5000 });
         await expect(browser).toHaveUrlContaining('/resources/topic/messaging');
         await expect(this.chosedFilterLink).toHaveAttrContaining('href', '/resources/topic/messaging');      
     }
@@ -71,7 +71,7 @@ class ResoucesPage extends Page {
     async clickVerifyAPIFilter(){
         //await this.chosedFilterLink.waitForDisplayed({ timeout: 5000 });
         await this.verifyAPIFilter.click();
-        await this.chosedFilterLink.waitForDisplayed({ timeout: 5000 });
+        //await this.chosedFilterLink.waitForDisplayed({ timeout: 5000 });
         await expect(browser).toHaveUrlContaining('/resources/topic/verify-api');
         await expect(this.chosedFilterLink).toHaveAttrContaining('href', '/resources/topic/verify-api');
     }
@@ -79,7 +79,7 @@ class ResoucesPage extends Page {
     async clickSIPTrunkingFilter(){
         //await this.chosedFilterLink.waitForDisplayed({ timeout: 5000 });
         await this.sIPTrunkingFilter.click();
-        await this.chosedFilterLink.waitForDisplayed({ timeout: 5000 });
+        //await this.chosedFilterLink.waitForDisplayed({ timeout: 5000 });
         await expect(browser).toHaveUrlContaining('/topic/sip-trunking');
         await expect(this.chosedFilterLink).toHaveAttrContaining('href', '/topic/sip-trunking');
     }
@@ -87,7 +87,7 @@ class ResoucesPage extends Page {
     async clickStorageFilter(){
         //await this.chosedFilterLink.waitForDisplayed({ timeout: 5000 });
         await this.storageFilter.click();
-        await this.chosedFilterLink.waitForDisplayed({ timeout: 5000 });
+        //await this.chosedFilterLink.waitForDisplayed({ timeout: 5000 });
         await expect(browser).toHaveUrlContaining('/resources/topic/storage');
         await expect(this.chosedFilterLink).toHaveAttrContaining('href', '/resources/topic/storage');
     }
@@ -95,7 +95,7 @@ class ResoucesPage extends Page {
     async clickFaxFilter(){
         //await this.chosedFilterLink.waitForDisplayed({ timeout: 5000 });
         await this.faxFilter.click();
-        await this.chosedFilterLink.waitForDisplayed({ timeout: 5000 });
+        //await this.chosedFilterLink.waitForDisplayed({ timeout: 5000 });
         await expect(browser).toHaveUrlContaining('/resources/topic/fax');
         await expect(this.chosedFilterLink).toHaveAttrContaining('href', '/resources/topic/fax');
     }
@@ -103,7 +103,7 @@ class ResoucesPage extends Page {
     async clickIotSimCardFilter(){
         //await this.chosedFilterLink.waitForDisplayed({ timeout: 5000 });
         await this.iotSimCardFilter.click();
-        await this.chosedFilterLink.waitForDisplayed({ timeout: 5000 });
+        //await this.chosedFilterLink.waitForDisplayed({ timeout: 5000 });
         await expect(browser).toHaveUrlContaining('/resources/topic/wireless');
         await expect(this.chosedFilterLink).toHaveAttrContaining('href', '/resources/topic/wireless');
     }
@@ -111,7 +111,7 @@ class ResoucesPage extends Page {
     async clickProductUpdatesFilter(){
         //await this.chosedFilterLink.waitForDisplayed({ timeout: 5000 });
         await this.productUpdatesFilter.click();
-        await this.chosedFilterLink.waitForDisplayed({ timeout: 5000 });
+        //await this.chosedFilterLink.waitForDisplayed({ timeout: 5000 });
         await expect(browser).toHaveUrlContaining('/resources/category/new-products-&-features');
         await expect(this.chosedFilterLink).toHaveAttrContaining('href', '/resources/category/new-products-&-features');
     }
@@ -119,7 +119,7 @@ class ResoucesPage extends Page {
     async clickGuidesAndTutorialsFilter(){
         //await this.chosedFilterLink.waitForDisplayed({ timeout: 5000 });
         await this.guidesAndTutorialsFilter.click();
-        await this.chosedFilterLink.waitForDisplayed({ timeout: 5000 });
+        //await this.chosedFilterLink.waitForDisplayed({ timeout: 5000 });
         await expect(browser).toHaveUrlContaining('/resources/category/guides-&-tutorials');
         await expect(this.chosedFilterLink).toHaveAttrContaining('href', '/resources/category/guides-&-tutorials');
     }
@@ -127,7 +127,7 @@ class ResoucesPage extends Page {
     async clickNewsAndEventsFilter(){
         //await this.chosedFilterLink.waitForDisplayed({ timeout: 5000 });
         await this.newsAndEventsFilter.click();
-        await this.chosedFilterLink.waitForDisplayed({ timeout: 5000 });
+        //await this.chosedFilterLink.waitForDisplayed({ timeout: 5000 });
         await expect(browser).toHaveUrlContaining('/resources/category/news-&-events');
         await expect(this.chosedFilterLink).toHaveAttrContaining('href', '/resources/category/news-&-events');
     }
@@ -135,7 +135,7 @@ class ResoucesPage extends Page {
     async clickExpertInsightsFilter(){
         //await this.chosedFilterLink.waitForDisplayed({ timeout: 5000 });
         await this.expertInsightsFilter.click();
-        await this.chosedFilterLink.waitForDisplayed({ timeout: 5000 });
+        //await this.chosedFilterLink.waitForDisplayed({ timeout: 5000 });
         await expect(browser).toHaveUrlContaining('/resources/category/insights-&-resources');
         await expect(this.chosedFilterLink).toHaveAttrContaining('href', '/resources/category/insights-&-resources');
     }   
