@@ -18,4 +18,8 @@ export default class Page {
     async clickCloseButton(){
         await this.closeButton.click();
     }   
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> log_in_form_BU_003
