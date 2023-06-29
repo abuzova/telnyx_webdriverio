@@ -70,7 +70,6 @@ class HeaderPage extends Page {
     get partnersSubBLock(){
         return $('header div>nav div:nth-child(11) div[data-radix-popper-content-wrapper]');
        // return $('//header/div/div/div/nav//div/div[@data-radix-popper-content-wrapper]');
-
     }
 
     async clickLogIn(){
@@ -102,7 +101,7 @@ class HeaderPage extends Page {
         await expect(browser).toHaveUrlContaining('/pricing/elastic-sip'); 
     }
 
-    // Pricing
+    // Products
     async clickProductsLinkMenuItem(){
         await this.productsMenuItem.click();
         await this.productSubBlock.isExisting();
