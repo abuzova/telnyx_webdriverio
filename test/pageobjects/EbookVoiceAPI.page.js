@@ -79,10 +79,6 @@ class EbookVoiceAPIPage extends Page {
     async clickSendContent(){
         await this.sendContentButton.click();
     }
-
-    /*open () {
-        return super.open('');
-    }*/
 }
 
 export default new EbookVoiceAPIPage();
