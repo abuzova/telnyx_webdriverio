@@ -57,8 +57,6 @@ export const config = {
 
         // browserName: 'chromium-browser' 
     } /*, 
-    
-    /*{ 
 
         // capabilities for local browser web tests
         browserName: 'firefox' // or "", "microsoftedge", "safari"
@@ -71,8 +69,8 @@ export const config = {
         // capabilities for local browser web tests
         browserName: 'safari' // or "firefox", "microsoftedge", "safari"
 
+    }*/ ],
 
-    } */ ],
     //
     // ===================
     // Test Configurations

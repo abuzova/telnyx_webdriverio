@@ -12,6 +12,10 @@ class Constants {
     PRIMARY_INTEREST = 'Conversational Messaging';
     DESCRIBE_REQUEST = 'Describe your request'
     HOW_DID_YOU_HEAR = 'Social media'; 
+    COMPANY = 'United Kingdom (+44)';
+    PARTNER_TYPE = 'Reseller ';
+    WHY_TELNYX_PARTNER = 'Tell us why you would like to become a Telnyx partner';
+
 }
 
 export default new Constants;

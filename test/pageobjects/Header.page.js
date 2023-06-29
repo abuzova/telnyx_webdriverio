@@ -70,17 +70,13 @@ class HeaderPage extends Page {
     get partnersSubBLock(){
         return $('header div>nav div:nth-child(11) div[data-radix-popper-content-wrapper]');
        // return $('//header/div/div/div/nav//div/div[@data-radix-popper-content-wrapper]');
+
     }
 
     async clickLogIn(){
         await this.logInLink.click();
         await browser.switchWindow('Telnyx Customer Portal'); 
         await expect(browser).toHaveUrlContaining('sign-in');  
-    }   
-    
-    async clickSignUpLink(){
-        await this.signUpLink.click();
-
     } 
     
     async clickSignUpLink(){
@@ -93,8 +89,8 @@ class HeaderPage extends Page {
         await expect(browser).toHaveUrlContaining('contact-us');  
     }
 
-    // Main menu    
 
+    // Main menu
     // Pricing
     async clickPricingLinkMenuItem(){
         await this.pricingLinkMenuItem.click();
@@ -104,8 +100,9 @@ class HeaderPage extends Page {
     async clickPricingSIPTrunkingSubMenuItem(){
         await this.pricingSIPTrunkingSubMenuItem.click();
         await expect(browser).toHaveUrlContaining('/pricing/elastic-sip'); 
-    }   
+    }
 
+    // Pricing
     async clickProductsLinkMenuItem(){
         await this.productsMenuItem.click();
         await this.productSubBlock.isExisting();
