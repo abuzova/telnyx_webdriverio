@@ -69,17 +69,17 @@ class HeaderPage extends Page {
 
     get partnersSubBLock(){
         return $('header div>nav div:nth-child(11) div[data-radix-popper-content-wrapper]');
+       // return $('//header/div/div/div/nav//div/div[@data-radix-popper-content-wrapper]');
     }
 
     async clickLogIn(){
         await this.logInLink.click();
         await browser.switchWindow('Telnyx Customer Portal'); 
         await expect(browser).toHaveUrlContaining('sign-in');  
-    }
-
-
+    }   
+    
     async clickSignUpLink(){
-        await this.signUpLink.click(); 
+        await this.signUpLink.click();
         await expect(browser).toHaveUrlContaining('sign-up');  
     }
 

@@ -17,5 +17,6 @@ export default class Page {
 
     async clickCloseButton(){
         await this.closeButton.click();
+
     }
 }
