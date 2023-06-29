@@ -19,10 +19,6 @@ class ContactUsPage extends Page {
         return $('input[name="LastName"]');
     }
 
-    /*get passwordInput() {
-        return $('name="LastName"');
-    }*/
-
     get emailInput() {
         return $('input[name="Email"]');
     }
@@ -71,9 +67,6 @@ class ContactUsPage extends Page {
     }
 
     async setHowHelp(helpValue){
-       // await this.passwordInput.setValue(helpValue);
-       // await expect(await this.passwordInput).toHaveValue(helpValue);
-
         await this.howHelpSelect.selectByVisibleText(helpValue);
         await this.howHelpSelect.isElementSelected(helpValue);
     }
@@ -99,9 +92,6 @@ class ContactUsPage extends Page {
     }
 
     async setCountry(countryValue) {
-        // await this.passwordInput.setValue(helpValue);
-        // await expect(await this.passwordInput).toHaveValue(helpValue);
-
         await this.countrySelect.selectByVisibleText(countryValue);
         await this.countrySelect.isElementSelected(countryValue);
     } 
@@ -117,9 +107,6 @@ class ContactUsPage extends Page {
     }
 
      async setPrimaryInterest(primaryInterestValue) {
-        /* await this.passwordInput.setValue(helpValue);
-        await expect(await this.passwordInput).toHaveValue(helpValue); */
-
         await this.primaryInterestSelect.selectByVisibleText(primaryInterestValue);
         await this.primaryInterestSelect.isElementSelected(primaryInterestValue);
     } 

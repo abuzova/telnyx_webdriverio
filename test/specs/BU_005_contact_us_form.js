@@ -14,7 +14,6 @@ describe('My Login application', () => {
         await ContactUsPage.setHowHelp(Constants.HOW_HELP);
         await ContactUsPage.setFirstName(Constants.FIRST_NAME);
         await ContactUsPage.setLastName(Constants.LAST_NAME);
-       //await ContactUsPage.setInputPassword(Constants.PASSWORD);
         await ContactUsPage.setEmail(Constants.COMPANY_EMAIL);
         await ContactUsPage.setCountry(Constants.COUNTRY);
         await ContactUsPage.setPhoneNumber(Constants.PHONE_NUMBER);
