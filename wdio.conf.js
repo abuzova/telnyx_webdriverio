@@ -71,8 +71,8 @@ export const config = {
         // capabilities for local browser web tests
         browserName: 'safari' // or "firefox", "microsoftedge", "safari"
 
-    } */ ],
 
+    } */ ],
     //
     // ===================
     // Test Configurations

@@ -80,6 +80,11 @@ class HeaderPage extends Page {
     
     async clickSignUpLink(){
         await this.signUpLink.click();
+
+    } 
+    
+    async clickSignUpLink(){
+        await this.signUpLink.click();
         await expect(browser).toHaveUrlContaining('sign-up');  
     }
 
@@ -101,7 +106,6 @@ class HeaderPage extends Page {
         await expect(browser).toHaveUrlContaining('/pricing/elastic-sip'); 
     }   
 
-    // Products
     async clickProductsLinkMenuItem(){
         await this.productsMenuItem.click();
         await this.productSubBlock.isExisting();
