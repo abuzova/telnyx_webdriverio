@@ -28,23 +28,23 @@ class SolutionsPage extends Page {
     }
 
     async haveHealthcareLink(){
-        this.healthcareLink.toHaveAttribute('href', '/solutions/healthcare'); 
+        await expect(this.healthcareLink).toHaveAttribute('href', '/solutions/healthcare'); 
     }
 
     async haveRetailEcommerceLink(){
-        this.retailEcommerceLink.toHaveAttribute('href', '/solutions/retail-and-ecommerce');
+        await expect(this.retailEcommerceLink).toHaveAttribute('href', '/solutions/retail-and-ecommerce');
     }
 
     async haveLogisticsTransportationLink(){
-        this.logisticsTransportationLink.toHaveAttribute('href', '/solutions/logistics-and-transportation');
+        await expect(this.logisticsTransportationLink).toHaveAttribute('href', '/solutions/logistics-and-transportation');
     }
 
     async haveTravelHospitalityLink(){
-        this.travelHospitalityLink.toHaveAttribute('href', '/solutions/travel-and-hospitality');
+        await expect(this.travelHospitalityLink).toHaveAttribute('href', '/solutions/travel-and-hospitality');
     }
 
     async haveFinancialServicesLink(){
-        this.financialServicesLink.toHaveAttribute('href', '/solutions/financial-services');
+        await expect(this.financialServicesLink).toHaveAttribute('href', '/solutions/financial-services');
     }
 }
 
