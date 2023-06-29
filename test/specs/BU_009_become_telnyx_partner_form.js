@@ -25,5 +25,3 @@ describe('My Login application', () => {
         // await PartnershipsPage.clickApplyNow();   
     })
 })
-
-
