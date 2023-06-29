@@ -60,12 +60,6 @@ class ElasticSipPage extends Page {
         await this.submitBtn.click();
     }
 
-    /**
-     * overwrite specific options to adapt it to page object
-     */
-    /*open () {
-        return super.open('login');
-    }*/
 }
 
 export default new ElasticSipPage();
