@@ -77,6 +77,7 @@ class HeaderPage extends Page {
         await expect(browser).toHaveUrlContaining('sign-in');  
     }
 
+
     async clickSignUpLink(){
         await this.signUpLink.click(); 
         await expect(browser).toHaveUrlContaining('sign-up');  
@@ -137,6 +138,5 @@ class HeaderPage extends Page {
         return super.open('');
     }*/
 }
-
 
 export default new HeaderPage();
