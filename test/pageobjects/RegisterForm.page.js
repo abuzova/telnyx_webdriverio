@@ -46,34 +46,25 @@ class RegisterFormPage extends Page {
     /**
      * a method to encapsule automation code to interact with the page
      * e.g. to login using username and password
-     */
-    /*async login (username, password) {
-        await this.inputUsername.setValue(username);
-        await this.inputPassword.setValue(password);
-        await this.btnSubmit.click();
-    }*/
+     */   
 
     async setCompanyEmail(emailValue){
         await this.companyEmailInput.setValue(emailValue);
-        //await expect(await this.companyEmailInput).toHaveValue(emailValue, { ignoreCase: true });
         await expect(await this.companyEmailInput).toHaveValue(emailValue);
     }
 
     async setFirstName(firstNameValue){
         await this.firstNameInput.setValue(firstNameValue);
-        //await expect(await this.firstNameInput).toHaveValue(firstNameValue, { ignoreCase: true });
         await expect(await this.firstNameInput).toHaveValue(firstNameValue);
     }
 
     async setLastName(lastNameValue){
         await this.lastNameInput.setValue(lastNameValue);
-        //await expect(await this.businessEmailInput).toHaveValue(lastNameValue, { ignoreCase: true });
         await expect(await this.lastNameInput).toHaveValue(lastNameValue);
     }
 
     async setPassword(passwordValue){
         await this.passwordInput.setValue(passwordValue);
-        //await expect(await this.businessEmailInput).toHaveValue(passwordValue, { ignoreCase: true });
         await expect(await this.passwordInput).toHaveValue(passwordValue);
     }
 

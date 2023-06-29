@@ -22,8 +22,7 @@ class HeaderPage extends Page {
     } 
     
     async clickSignUpLink(){
-        await this.signUpLink.click();
-        //await browser.switchWindow('Telnyx Customer Portal'); 
+        await this.signUpLink.click(); 
         await expect(browser).toHaveUrlContaining('sign-up');  
     }
 }
