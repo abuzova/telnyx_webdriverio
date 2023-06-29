@@ -54,15 +54,11 @@ export const config = {
     capabilities: [{
         // capabilities for local browser web tests
         browserName: 'chrome' // or "firefox", "microsoftedge", "safari" 
-<<<<<<< HEAD
+
         // browserName: 'chromium-browser' 
     } /*, 
-    {
-=======
-        //browserName: 'chromium-browser' 
-    }, 
+    
     /*{
->>>>>>> log_in_form_BU_003
         // capabilities for local browser web tests
         browserName: 'firefox' // or "", "microsoftedge", "safari"
     }, 
@@ -73,11 +69,9 @@ export const config = {
     {
         // capabilities for local browser web tests
         browserName: 'safari' // or "firefox", "microsoftedge", "safari"
-<<<<<<< HEAD
+
     } */ ],
-=======
-    }*/],
->>>>>>> log_in_form_BU_003
+
     //
     // ===================
     // Test Configurations

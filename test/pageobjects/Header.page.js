@@ -9,7 +9,6 @@ class HeaderPage extends Page {
      */
     get logInLink() {
         return $('header>div>div>div>div>a:nth-child(2)');
-<<<<<<< HEAD
     } 
     
     get signUpLink(){
@@ -71,15 +70,12 @@ class HeaderPage extends Page {
     get partnersSubBLock(){
         return $('header div>nav div:nth-child(11) div[data-radix-popper-content-wrapper]');
     }
-=======
-    }   
->>>>>>> log_in_form_BU_003
 
     async clickLogIn(){
         await this.logInLink.click();
         await browser.switchWindow('Telnyx Customer Portal'); 
         await expect(browser).toHaveUrlContaining('sign-in');  
-<<<<<<< HEAD
+
     } 
     
     async clickSignUpLink(){
@@ -145,9 +141,3 @@ class HeaderPage extends Page {
 }
 
 export default new HeaderPage();
-=======
-    }  
-}
-
-export default new HeaderPage();
->>>>>>> log_in_form_BU_003
