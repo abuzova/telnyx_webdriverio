@@ -1,5 +1,4 @@
 import Page from './Page.js';
-import Constants from '../helper/constants.js';
 
 /**
  * sub page containing specific selectors and methods for a specific page
