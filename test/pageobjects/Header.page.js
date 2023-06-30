@@ -34,6 +34,10 @@ class HeaderPage extends Page {
         return $('//header/div/div/div/nav/div//a/span[text()="Voice API"]');
     }
 
+    get productsSeeAllProductsSubMenuItem(){
+        return $('//header/div/div/div/nav/div//a/span[text()="See all products"]');
+    }
+
     get productSubBlock(){
         return $('header div>nav div:nth-child(2) div[data-radix-popper-content-wrapper]');
     }
@@ -117,6 +121,11 @@ class HeaderPage extends Page {
         await expect(browser).toHaveUrlContaining('/products/voice-api'); 
     }
 
+    async clickProductsSeeAllProductsSubMenuItem(){
+        await this.productsSeeAllProductsSubMenuItem.click();
+        await expect(browser).toHaveUrlContaining('/products'); 
+    }
+    
     // Solutions
     async clickSolutionsMenuItem(){
         await this.solutionsMenuItem.click();
