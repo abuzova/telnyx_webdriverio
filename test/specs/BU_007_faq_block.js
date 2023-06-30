@@ -1,11 +1,11 @@
-import FAQBlockPagePage from '../pageobjects/FAQBlock.page.js'
+import FAQBlockPage from '../pageobjects/FAQBlock.page.js'
 import HeaderPage from '../pageobjects/Header.page.js'
-import Constants from '../helper/constants.js'
+//import Constants from '../helper/constants.js'
 
 describe('My Login application', () => {
     beforeEach( async () => {
         await browser.setWindowSize(1800, 1500);
-        await HeaderPage.open();
+        await HeaderPage.open('');
         await HeaderPage.clickCloseButton();
     })
 
@@ -13,14 +13,12 @@ describe('My Login application', () => {
         await HeaderPage.clickProductsLinkMenuItem();
         await HeaderPage.clickProductsSIPTrunkingSubMenuItem();
 
-
-
-        /*await ElasticSipPage.setFirstName(Constants.FIRST_NAME);
-        await ElasticSipPage.setLastName(Constants.LAST_NAME);
-        await ElasticSipPage.setBusinessEmail(Constants.COMPANY_EMAIL);
-        await ElasticSipPage.clickSubscription();   */           
-        // await ContactUsPage.clickSubmit();
-
+        await FAQBlockPage.clickSecondButton();
+        await FAQBlockPage.clickThirdButton();
+        await FAQBlockPage.clickFourthButton();
+        await FAQBlockPage.clickFifthButton();
+        await FAQBlockPage.clickSixthButton();
+        await FAQBlockPage.clickSeventhButton();
+        await FAQBlockPage.clickFirstButton();
     })
 })
-
