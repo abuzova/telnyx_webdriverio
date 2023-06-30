@@ -168,10 +168,6 @@ class HeaderPage extends Page {
         await this.resourcesMenuItem.click();
         await this.resourcesSubBlock.isExisting();
     }
-
-    /*open () {
-        return super.open('');
-    }*/
 }
 
 export default new HeaderPage();

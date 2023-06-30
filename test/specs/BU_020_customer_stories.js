@@ -10,7 +10,7 @@ describe('My Login application', () => {
         await HeaderPage.clickCloseButton();       
     })
 
-    it('Verify "2023 SMS Deliverability eBook" form with valid credentials', async () => {
+    it('Checking "Read about what our customers are building" block content', async () => {
         await HeaderPage.clickResourcesLinkMenuItem();
         await HeaderPage.clickCustomerStoriesResourcesSubMenuItem();
 
