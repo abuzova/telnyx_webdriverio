@@ -81,7 +81,6 @@ class HeaderPage extends Page {
     
     async clickSignUpLink(){
         await this.signUpLink.click();
-        //await browser.switchWindow('Telnyx Customer Portal'); 
         await expect(browser).toHaveUrlContaining('sign-up');  
     }
 
@@ -136,9 +135,6 @@ class HeaderPage extends Page {
         await this.partnersSubBLock.isExisting();
     }
 
-    /*open () {
-        return super.open('');
-    }*/
 }
 
 export default new HeaderPage();
