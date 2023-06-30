@@ -5,7 +5,7 @@ import Constants from '../helper/constants.js'
 describe('My Login application', () => {
     beforeEach( async () => {
         await browser.setWindowSize(1800, 1500);
-        await LoginPage.open();
+        await LoginPage.open('');
         await LoginPage.clickCloseButton();
     });
 
