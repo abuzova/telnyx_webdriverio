@@ -86,7 +86,6 @@ class HeaderPage extends Page {
        // return $('//header/div/div/div/nav//div/div[@data-radix-popper-content-wrapper]');
     }
 
-
     // Resources
 
     get resourcesMenuItem(){
@@ -97,10 +96,13 @@ class HeaderPage extends Page {
         return $('//header/div/div/div/nav//a/span[text()="Blog"]');
     }
 
+    get customerStoriesResourcesSubMenuItem(){
+        return $('//header/div/div/div/nav//a/span[text()="Customer Stories"]/parent::a');
+    }
+
     get resourcesSubBlock(){
         return $('header div>nav div:nth-child(14) div[data-radix-popper-content-wrapper]');
     }
-
 
     async clickLogIn(){
         await this.logInLink.click();
@@ -179,12 +181,16 @@ class HeaderPage extends Page {
         await this.whyTelnyxSubBLock.isExisting();
     }
 
-
     // Resources
 
     async clickBlogResourcesSubMenuItem(){
         await this.blogResourcesSubMenuItem.click();
         await expect(browser).toHaveUrlContaining('/resources'); 
+    }
+
+    async clickCustomerStoriesResourcesSubMenuItem(){
+        await this.customerStoriesResourcesSubMenuItem.click();
+        await expect(browser).toHaveUrlContaining('/customer-stories'); 
     }
 
     async clickResourcesLinkMenuItem(){
