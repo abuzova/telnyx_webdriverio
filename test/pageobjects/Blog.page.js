@@ -24,10 +24,6 @@ class BlogPage extends Page {
         await this.sms_mms_DeliverabilityGuideArticle.click();
         await expect(browser).toHaveUrlContaining('/resources/sms-mms-deliverability-guide-2023');
     }
-
-    /*open () {
-        return super.open('');
-    }*/
 }
 
 export default new BlogPage();
