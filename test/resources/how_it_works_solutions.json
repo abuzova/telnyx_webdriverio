@@ -1,0 +1,22 @@
+{
+    "first_block": {
+            "number": "1",
+            "title": "Build logic into your application",
+            "description": "Set up triggers in your application to send account-related notifications at specific times or based on specific events, such as a status update on a package. Connect these to the set-and-forget Telnyx Messaging API."
+            },
+    "second_block": {
+            "number": "2",
+            "title": "Your app tells Telnyx to send an alert",
+            "description": "Based on your logic, Telnyx will trigger a text message notification to your customer. This could be anything from appointment reminders to customer notices."  
+    },
+    "third_block": {
+            "number": "3",
+            "title": "Capture all your customer responses",
+            "description": "With 2-way SMS numbers, customers can respond by replying to the SMS with whatever logic you like, for example a “Y” to confirm attendance of an appointment. This allows you to manage the customer experience beyond mobile apps, push or web notifications."
+    },
+    "fourth_block": {
+            "number": "4",
+            "title": "Reply as needed and when needed",
+            "description": "You can reply to a customer as you see fit via the Messaging API. You can even port or host an existing customer service number for a fully integrated customer experience."
+    }
+}
