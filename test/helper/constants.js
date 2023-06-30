@@ -15,7 +15,7 @@ class Constants {
     COMPANY_EMAIL = 'comp@gmail.com';
     PARTNER_TYPE = 'Reseller ';
     WHY_TELNYX_PARTNER = 'Tell us why you would like to become a Telnyx partner';
-
+    
 }
 
 export default new Constants;

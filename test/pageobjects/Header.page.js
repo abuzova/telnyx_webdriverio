@@ -42,8 +42,6 @@ class HeaderPage extends Page {
         return $('header div>nav div:nth-child(2) div[data-radix-popper-content-wrapper]');
     }
 
-    // /products/sip-trunks
-
     // Pricing
     get pricingLinkMenuItem(){
         return $('//header/div/div/div/nav//button/div/span[text()="Pricing"]');
@@ -52,6 +50,7 @@ class HeaderPage extends Page {
     get pricingSIPTrunkingSubMenuItem(){
         return $('//header/div/div/div/nav//a/span[text()="SIP Trunking"]');
     }
+
 
     get pricingSeeAllPricingSubMenuItem(){
         return $('//header/div/div/div/nav//a/span[text()="See all pricing"]');
@@ -112,6 +111,7 @@ class HeaderPage extends Page {
     
     async clickSignUpLink(){
         await this.signUpLink.click();
+        //await browser.switchWindow('Telnyx Customer Portal');
         await expect(browser).toHaveUrlContaining('sign-up');  
     }
 
@@ -200,3 +200,4 @@ class HeaderPage extends Page {
 }
 
 export default new HeaderPage();
+

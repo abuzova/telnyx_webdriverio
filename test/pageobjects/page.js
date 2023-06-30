@@ -20,3 +20,4 @@ export default class Page {
         await this.closeButton.click();
     }   
 }
+
