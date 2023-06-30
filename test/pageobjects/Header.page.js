@@ -86,6 +86,7 @@ class HeaderPage extends Page {
        // return $('//header/div/div/div/nav//div/div[@data-radix-popper-content-wrapper]');
     }
 
+
     // Resources
 
     get resourcesMenuItem(){
@@ -177,6 +178,7 @@ class HeaderPage extends Page {
         await this.whyTelnyxMenuItem.click();
         await this.whyTelnyxSubBLock.isExisting();
     }
+
 
     // Resources
 

@@ -16,6 +16,7 @@ export default class Page {
     }
 
     async clickCloseButton(){
+        await this.closeButton.waitForDisplayed({ timeout: 5000 });
         await this.closeButton.click();
     }   
 }
