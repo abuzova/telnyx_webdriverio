@@ -1,0 +1,30 @@
+{
+    "main_block":{
+            "title": "Powerful voice API features out of the box",
+            "description": "Build programmable voice applications like you would build a web app—simple HTTP commands or XML scripting unlocks a toolkit of features including call flow control, recordings, conferencing and more."
+            },
+    "first_block": {
+            "title": "Conference calling",
+            "description": "Connect people and teams across the globe with feature-rich audio conferencing."
+            },
+    "second_block": {
+            "title": "Media streaming",
+            "description": "Access the raw audio stream of calls in real-time to integrate advanced AI/ML capabilities."  
+    },
+    "third_block": {
+            "title": "Text-to-speech",
+            "description": "Speak dynamic text in 29 languages and accents, powered by Amazon Polly."
+    },
+    "fourth_block": {
+            "title": "Answering machine detection",
+            "description": "Detect voicemail systems with exceptional accuracy using advanced AI techniques."
+    },
+    "fifth_block": {
+            "title": "Speech-to-text",
+            "description": "Real-time transcription and diarization on a live call, activated via one API command."
+    },
+    "sixth_block": {
+            "title": "Smart IVR",
+            "description": "Build a multi-level interactive voice response (IVR) phone tree to intelligently route your call flows via DTMF or voice commands."
+    }
+}
