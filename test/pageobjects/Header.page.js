@@ -143,9 +143,6 @@ class HeaderPage extends Page {
         await this.partnersSubBLock.isExisting();
     }
 
-    /*open () {
-        return super.open('');
-    }*/
 }
 
 export default new HeaderPage();

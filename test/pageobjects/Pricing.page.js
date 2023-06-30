@@ -104,9 +104,6 @@ class PricingPage extends Page {
         await expect(this.storageLink).toHaveAttrContaining('href', '/pricing/storage');        
     } 
 
-    /*open () {
-        return super.open('');
-    }*/
 }
 
 export default new PricingPage();
