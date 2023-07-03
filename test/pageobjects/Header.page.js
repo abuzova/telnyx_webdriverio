@@ -24,7 +24,7 @@ class HeaderPage extends Page {
     // Products block
     // Products
     get productsMenuItem(){
-        return $('//header/div/div/div/nav//button/div/span[text()="Products"]');
+        return $('//header/div/div/div/nav//button/div/span/span[text()="Products"]');
     }
 
     get productSubBlock(){
@@ -33,58 +33,58 @@ class HeaderPage extends Page {
 
     //SMS API
     get productsSmsApiSubMenuItem(){
-        return $('//header/div/div/div/nav/div//a/span[text()="SMS API"]');
+        return $('//header/div/div/div/nav/div//a/span/span[contains(text(), "SMS API")]');
     }
 
     //Global Numbers
     get productsGlobalNumbersSubMenuItem(){
-        return $('//header/div/div/div/nav/div//a/span[text()="Global Numbers"]');
+        return $('//header/div/div/div/nav/div//a/span/span[text()="Global Numbers"]');
     }
 
     // SIP Trunking
     get productsSIPTrunkingSubMenuItem(){
-        return $('//header/div/div/div/nav/div//a/span[text()="SIP Trunking"]');
+        return $('//header/div/div/div/nav/div//a/span/span[text()="SIP Trunking"]');
     }
 
     // IoT SIM Card
     get productsIoTSIMCardSubMenuItem(){
-        return $('//header/div/div/div/nav/div//a/span[text()="IoT SIM Card"]');
+        return $('//header/div/div/div/nav/div//a/span/span[text()="IoT SIM Card"]');
     }
 
     // Voice API
     get productsVoiceAPISubMenuItem(){
-        return $('//header/div/div/div/nav/div//a/span[text()="Voice API"]');
+        return $('//header/div/div/div/nav/div//a/span/span[text()="Voice API"]');
     }        
         
     // Storage
     get productsStorageSubMenuItem(){
-        return $('//header/div/div/div/nav/div//a/span[text()="Storage"]');
+        return $('//header/div/div/div/nav/div//a/span/span[text()="Storage"]');
     }
 
     // Microsoft Teams
     get productsMicrosoftTeamsSubMenuItem(){
-        return $('//header/div/div/div/nav/div//a/span[text()="Microsoft Teams"]');
+        return $('//header/div/div/div/nav/div//a/span/span[text()="Microsoft Teams"]');
     }
 
     // Zoom Phone
     get productsZoomPhoneSubMenuItem(){
-        return $('//header/div/div/div/nav/div//a/span[text()="Zoom Phone"]');
+        return $('//header/div/div/div/nav/div//a/span/span[text()="Zoom Phone"]');
     }
 
     // Global Edge Router
     get productsGlobalEdgeRouterSubMenuItem(){
-        return $('//header/div/div/div/nav/div//a/span[text()="Global Edge Router"]');
+        return $('//header/div/div/div/nav/div//a/span/span[text()="Global Edge Router"]');
     } 
 
     // See all products
     get productsSeeAllProductsSubMenuItem(){
-        return $('//header/div/div/div/nav/div//a/span[text()="See all products"]');
+        return $('//header/div/div/div/nav/div//a/span/span[text()="See all products"]');
     }
 
     // Pricing block
     // Pricing
     get pricingMenuItem(){
-        return $('//header/div/div/div/nav//button/div/span[text()="Pricing"]');
+        return $('//header/div/div/div/nav//button/div/span/span[text()="Pricing"]');
     }
 
     get pricingSubBlock(){
@@ -93,50 +93,50 @@ class HeaderPage extends Page {
 
     // Messaging API
     get pricingMessagingAPISubMenuItem(){
-        return $('//header/div/div/div/nav//a/span[text()="Messaging API"]');
+        return $('//header/div/div/div/nav//a/span/span[text()="Messaging API"]');
     } 
 
     // Global Numbers
     get pricingGlobalNumbersSubMenuItem(){
-        return $('//header/div/div/div/nav//a/span[text()="Global Numbers"]');
+        return $('//header/div/div/div/nav//a/span/span[text()="Global Numbers"]');
     } 
 
     // SIP Trunking
     get pricingSIPTrunkingSubMenuItem(){
-        return $('//header/div/div/div/nav//a/span[text()="SIP Trunking"]');
+        return $('//header/div/div/div/nav//a/span/span[text()="SIP Trunking"]');
     }
     
     // IoT SIM Card
     get pricingIoTSIMCardSubMenuItem(){
-        return $('//header/div/div/div/nav//a/span[text()="IoT SIM Card"]');
+        return $('//header/div/div/div/nav//a/span/span[text()="IoT SIM Card"]');
     } 
 
     // Voice API
     get pricingVoiceAPISubMenuItem(){
-        return $('//header/div/div/div/nav//a/span[text()="Voice API"]');
+        return $('//header/div/div/div/nav//a/span/span[text()="Voice API"]');
     } 
 
     // Storage
     get pricingStorageSubMenuItem(){
-        return $('//header/div/div/div/nav//a/span[text()="Storage"]');
+        return $('//header/div/div/div/nav//a/span/span[text()="Storage"]');
     } 
 
     // See all pricing
     get pricingSeeAllPricingSubMenuItem(){
-        return $('//header/div/div/div/nav//a/span[text()="See all pricing"]');
+        return $('//header/div/div/div/nav//a/span/span[text()="See all pricing"]');
     } 
 
     // Solutions
 
     get solutionsMenuItem(){
-        return $('//nav/a/span[contains(text(), "Solutions")]');
+        return $('//nav/a/span/span[contains(text(), "Solutions")]');
     }
     
 
     // Why Telnyx block
     // Why Telnyx
     get whyTelnyxMenuItem(){
-        return $('//header/div/div/div/nav//button/div/span[text()="Why Telnyx"]');
+        return $('//header/div/div/div/nav//button/div/span/span[text()="Why Telnyx"]');
     }
     
     get whyTelnyxSubBLock(){
@@ -145,37 +145,37 @@ class HeaderPage extends Page {
 
     // Overview
     get whyTelnyxOverviewSubMenuItem(){
-        return $('//header/div/div/div/nav//a/span[text()="Overview"]');
+        return $('//header/div/div/div/nav//a/span/span[text()="Overview"]');
     }
 
     // Network
     get whyTelnyxNetworkSubMenuItem(){
-        return $('//header/div/div/div/nav//a/span[text()="Network"]');
+        return $('//header/div/div/div/nav//a/span/span[text()="Network"]');
     }
     // Mission Control
     get whyTelnyxMissionControlSubMenuItem(){
-        return $('//header/div/div/div/nav//a/span[text()="Mission Control"]');
+        return $('//header/div/div/div/nav//a/span/span[text()="Mission Control"]');
     }
 
     // Partners
     get whyTelnyxPartnersSubMenuItem(){
-        return $('//header/div/div/div/nav//a/span[text()="Partners"]');
+        return $('//header/div/div/div/nav//a/span/span[text()="Partners"]');
     }
         
     // Integrations
     get whyTelnyxIntegrationsSubMenuItem(){
-        return $('//header/div/div/div/nav//a/span[text()="Integrations"]');
+        return $('//header/div/div/div/nav//a/span/span[text()="Integrations"]');
     }
 
     // Global coverage
     get whyTelnyxGlobalCoverageSubMenuItem(){
-        return $('//header/div/div/div/nav//a/span[text()="Global coverage"]');
+        return $('//header/div/div/div/nav//a/span/span[text()="Global coverage"]');
     }   
    
     //  Resources block
     // Resources
     get resourcesMenuItem(){
-        return $('//header/div/div/div/nav//button/div/span[text()="Resources"]');
+        return $('//header/div/div/div/nav//button/div/span/span[text()="Resources"]');
     }
     
     get resourcesSubBlock(){
@@ -184,23 +184,23 @@ class HeaderPage extends Page {
 
     // Customer Stories
     get resourcesCustomerStoriesSubMenuItem(){
-        return $('//header/div/div/div/nav/div//a/span[text()="Customer Stories"]');
+        return $('//header/div/div/div/nav/div//a/span/span[text()="Customer Stories"]');
     } 
 
     // Blog
     get resourcesBlogSubMenuItem(){
-        return $('//header/div/div/div/nav/div//a/span[text()="Blog"]');
+        return $('//header/div/div/div/nav/div//a/span/span[text()="Blog"]');
     } 
 
     // Support Center
     get resourcesSupportCenterSubMenuItem(){
-        return $('//header/div/div/div/nav//a/span[text()="Support Center"]');
+        return $('//header/div/div/div/nav//a/span/span[text()="Support Center"]');
     } 
      
     // Developers block
     // Developers
     get developersMenuItem(){
-        return $('//header/div/div/div/nav//button/div/span[text()="Developers"]');
+        return $('//header/div/div/div/nav//button/div/span/span[text()="Developers"]');
     } 
 
     get developersSubBlock(){
@@ -209,12 +209,12 @@ class HeaderPage extends Page {
 
     // Dev Docs
     get developersDevDocsSubMenuItem(){
-        return $('//header/div/div/div/nav//a/span[text()="Dev Docs"]');
+        return $('//header/div/div/div/nav//a/span/span[text()="Dev Docs"]');
     } 
 
     // Dev Community
     get developersDevCommunitySubMenuItem(){
-        return $('//header/div/div/div/nav//a/span[text()="Dev Community"]');
+        return $('//header/div/div/div/nav//a/span/span[text()="Dev Community"]');
     } 
 
 
@@ -258,54 +258,53 @@ class HeaderPage extends Page {
 
     // SMS API
     async haveUrlProductsSmsApiSubMenuItem(){
-        //console.log('Hello ' + await this.productsSmsApiSubMenuItem.$$('/parent::a'));
-        await expect(this.productsSmsApiSubMenuItem.$$('/parent::a')).toHaveAttributeContaining('href', '/products/sms-api') 
+        await expect(this.productsSmsApiSubMenuItem.parentElement().parentElement()).toHaveAttributeContaining('href', '/products/sms-api'); 
     }
 
     // Global Numbers
     async haveUrlProductsGlobalNumbersSubMenuItem(){
-        await expect(this.productsGlobalNumbersSubMenuItem).toHaveAttribute('href', '/products/phone-numbers') 
+        await expect(this.productsGlobalNumbersSubMenuItem.parentElement().parentElement()).toHaveAttribute('href', '/products/phone-numbers') 
     }
     
 
     // SIP Trunking
     async haveUrlProductsSIPTrunkingSubMenuItem(){
-        await expect(this.productsSIPTrunkingSubMenuItem).toHaveAttribute('href', '/products/sip-trunks') 
+        await expect(this.productsSIPTrunkingSubMenuItem.parentElement().parentElement()).toHaveAttribute('href', '/products/sip-trunks') 
     }    
 
     // IoT SIM Card
     async haveUrlProductsIoTSIMCardSubMenuItem(){
-        await expect(this.productsIoTSIMCardSubMenuItem).toHaveAttribute('href', '/products/iot-sim-card') 
+        await expect(this.productsIoTSIMCardSubMenuItem.parentElement().parentElement()).toHaveAttribute('href', '/products/iot-sim-card') 
     }   
 
     // Voice API
     async haveUrlProductsVoiceAPISubMenuItem(){
-        await expect(this.productsVoiceAPISubMenuItem).toHaveAttribute('href', '/products/voice-api') 
+        await expect(this.productsVoiceAPISubMenuItem.parentElement().parentElement()).toHaveAttribute('href', '/products/voice-api') 
     }       
         
     // Storage
     async haveUrlProductsStorageSubMenuItem(){
-        await expect(this.productsStorageSubMenuItem).toHaveAttribute('href', '/products/cloud-storage') 
+        await expect(this.productsStorageSubMenuItem.parentElement().parentElement()).toHaveAttribute('href', '/products/cloud-storage') 
     }
    
     // Microsoft Teams
     async haveUrlProductsMicrosoftTeamsSubMenuItem(){
-        await expect(this.productsMicrosoftTeamsSubMenuItem).toHaveAttribute('href', '/products/enterprise-integrations-ms-teams') 
+        await expect(this.productsMicrosoftTeamsSubMenuItem.parentElement().parentElement()).toHaveAttribute('href', '/products/enterprise-integrations-ms-teams') 
     }   
 
     // Zoom Phone
     async haveUrlProductsZoomPhoneSubMenuItem(){
-        await expect(this.productsZoomPhoneSubMenuItem).toHaveAttribute('href', '/products/enterprise-integrations-zoom-phone') 
+        await expect(this.productsZoomPhoneSubMenuItem.parentElement().parentElement()).toHaveAttribute('href', '/products/enterprise-integrations-zoom-phone') 
     } 
     
     // Global Edge Router
     async haveUrlProductsGlobalEdgeRouterSubMenuItem(){
-        await expect(this.productsGlobalEdgeRouterSubMenuItem).toHaveAttribute('href', '/products/global-edge-router') 
+        await expect(this.productsGlobalEdgeRouterSubMenuItem.parentElement().parentElement()).toHaveAttribute('href', '/products/global-edge-router') 
     } 
 
     // See all products
     async haveUrlProductsSeeAllProductsSubMenuItem(){
-        await expect(this.productsSeeAllProductsSubMenuItem).toHaveAttribute('href', '/products') 
+        await expect(this.productsSeeAllProductsSubMenuItem.parentElement().parentElement()).toHaveAttribute('href', '/products') 
     } 
 
     // Solutions
@@ -316,12 +315,12 @@ class HeaderPage extends Page {
 
     // Have href Solutions
     async haveUrlSolutionsMenuItem(){
-        await expect(this.solutionsMenuItem).toHaveAttribute('href', '/solutions') 
+        await expect(this.solutionsMenuItem.parentElement().parentElement()).toHaveAttribute('href', '/solutions') 
     }
 
     // Pricing
-     async clickPricingLinkMenuItem(){
-        await this.pricingLinkMenuItem.click();
+    async clickPricingLinkMenuItem(){
+        await this.pricingMenuItem.click();
         await this.pricingSubBlock.isExisting();
     }
 
@@ -333,38 +332,38 @@ class HeaderPage extends Page {
     // Have href Pricing
     // Messaging API
     async haveUrlPricingMessagingAPISubMenuItem(){
-        await expect(this.pricingMessagingAPISubMenuItem).toHaveAttribute('href', '/pricing/messaging') 
+        await expect(this.pricingMessagingAPISubMenuItem.parentElement().parentElement()).toHaveAttribute('href', '/pricing/messaging') 
     }
 
     // Global Numbers
     async haveUrlPricingGlobalNumbersSubMenuItem(){
-        await expect(this.pricingGlobalNumbersSubMenuItem).toHaveAttribute('href', '/pricing/numbers') 
+        await expect(this.pricingGlobalNumbersSubMenuItem.parentElement().parentElement()).toHaveAttribute('href', '/pricing/numbers') 
     }
      
     // SIP Trunking
     async haveUrlPricingSIPTrunkingSubMenuItem(){
-        await expect(this.pricingSIPTrunkingSubMenuItem).toHaveAttribute('href', '/pricing/elastic-sip') 
+        await expect(this.pricingSIPTrunkingSubMenuItem.parentElement().parentElement()).toHaveAttribute('href', '/pricing/elastic-sip') 
     }
       
     // IoT SIM Card
     async haveUrlPricingIoTSIMCardSubMenuItem(){
-        await expect(this.pricingIoTSIMCardSubMenuItem).toHaveAttribute('href', '/pricing/iot-data-plans') 
+        await expect(this.pricingIoTSIMCardSubMenuItem.parentElement().parentElement()).toHaveAttribute('href', '/pricing/iot-data-plans') 
     }
 
     // Voice API
     async haveUrlPricingVoiceAPISubMenuItem(){
-        await expect(this.pricingVoiceAPISubMenuItem).toHaveAttribute('href', '/pricing/call-control') 
+        await expect(this.pricingVoiceAPISubMenuItem.parentElement().parentElement()).toHaveAttribute('href', '/pricing/call-control') 
     }
     
     // Storage
     async haveUrlPricingStorageSubMenuItem(){
-        await expect(this.pricingStorageSubMenuItem).toHaveAttribute('href', '/pricing/storage') 
+        await expect(this.pricingStorageSubMenuItem.parentElement().parentElement()).toHaveAttribute('href', '/pricing/storage') 
     }
     
 
     // See all pricing
     async haveUrlPricingSeeAllPricingSubMenuItem(){
-        await expect(this.pricingSeeAllPricingSubMenuItem).toHaveAttribute('href', '/pricing') 
+        await expect(this.pricingSeeAllPricingSubMenuItem.parentElement().parentElement()).toHaveAttribute('href', '/pricing') 
     }
 
     // Why Telnyx
@@ -373,68 +372,81 @@ class HeaderPage extends Page {
         await expect(browser).toHaveUrlContaining('/partnerships'); 
     }
 
-    async clickPartnersLinkMenuItem(){
+    async clickWhyTelnyxLinkMenuItem(){
         await this.whyTelnyxMenuItem.click();
-        await this.partnersSubBLock.isExisting();
+        await this.whyTelnyxSubBLock.isExisting();
     }
     
     // Have href Why Telnyx
     // Overview
     async haveUrlWhyTelnyxOverviewSubMenuItem(){
-        await expect(this.whyTelnyxOverviewSubMenuItem).toHaveAttribute('href', '/why-telnyx') 
+        await expect(this.whyTelnyxOverviewSubMenuItem.parentElement().parentElement()).toHaveAttribute('href', '/why-telnyx') 
     }
 
     // Network
     async haveUrlWhyTelnyxNetworkSubMenuItem(){
-        await expect(this.whyTelnyxNetworkSubMenuItem).toHaveAttribute('href', '/our-network') 
+        await expect(this.whyTelnyxNetworkSubMenuItem.parentElement().parentElement()).toHaveAttribute('href', '/our-network') 
     }
    
     // Mission Control
     async haveUrlWhyTelnyxMissionControlSubMenuItem(){
-        await expect(this.whyTelnyxMissionControlSubMenuItem).toHaveAttribute('href', '/mission-control') 
+        await expect(this.whyTelnyxMissionControlSubMenuItem.parentElement().parentElement()).toHaveAttribute('href', '/mission-control') 
     }
    
     // Partners
     async haveUrlWhyTelnyxPartnersSubMenuItem(){
-        await expect(this.whyTelnyxPartnersSubMenuItem).toHaveAttribute('href', '/partnerships') 
+        await expect(this.whyTelnyxPartnersSubMenuItem.parentElement().parentElement()).toHaveAttribute('href', '/partnerships') 
     }   
         
     // Integrations
     async haveUrlWhyTelnyxIntegrationsSubMenuItem(){
-        await expect(this.whyTelnyxIntegrationsSubMenuItem).toHaveAttribute('href', 'https://marketplace.telnyx.com') 
+        await expect(this.whyTelnyxIntegrationsSubMenuItem.parentElement().parentElement()).toHaveAttribute('href', 'https://marketplace.telnyx.com') 
     }
   
     // Global coverage
     async haveUrlWhyTelnyxGlobalCoverageSubMenuItem(){
-        await expect(this.whyTelnyxGlobalCoverageSubMenuItem).toHaveAttribute('href', '/global-coverage') 
-    }    
-   
+        await expect(this.whyTelnyxGlobalCoverageSubMenuItem.parentElement().parentElement()).toHaveAttribute('href', '/global-coverage') 
+    } 
 
-    // Have href Resources
+
+    // Resources     
+    async clickResourcesMenuItem(){
+        await this.resourcesMenuItem.click();
+        await this.resourcesSubBlock.isExisting();
+    }   
+
+    // Have href Resources  
+
     // Customer Stories
     async haveUrlResourcesCustomerStoriesSubMenuItem(){
-        await expect(this.resourcesCustomerStoriesSubMenuItem).toHaveAttribute('href', '/customer-stories') 
+        await expect(this.resourcesCustomerStoriesSubMenuItem.parentElement().parentElement()).toHaveAttribute('href', '/customer-stories');
     }   
 
     // Blog
     async haveUrlResourcesBlogSubMenuItem(){
-        await expect(this.resourcesBlogSubMenuItem).toHaveAttribute('href', '/resources') 
+        await expect(this.resourcesBlogSubMenuItem.parentElement().parentElement()).toHaveAttribute('href', '/resources'); 
     }    
 
     // Support Center
     async haveUrlResourcesSupportCenterSubMenuItem(){
-        await expect(this.resourcesSupportCenterSubMenuItem).toHaveAttribute('href', 'https://support.telnyx.com/en/') 
+        await expect(this.resourcesSupportCenterSubMenuItem.parentElement().parentElement()).toHaveAttribute('href', 'https://support.telnyx.com/en/'); 
     }
+
+    // Dev Docs
+    async clickDevDocsMenuItem(){
+        await this.developersMenuItem.click();
+        await this.developersSubBlock.isExisting();      
+    } 
    
     // Have href Developers 
     // Dev Docs
     async haveUrlDevelopersDevDocsSubMenuItem(){
-        await expect(this.developersDevDocsSubMenuItem).toHaveAttribute('href', 'https://developers.telnyx.com/?_gl=1*166xlav*_ga*MTgyMDI4MzY4LjE2NzUwNjc5MTU.*_ga_ZPM4K1DLND*MTY4Nzk3OTk5MC4yMDguMS4xNjg3OTgwMzEzLjU4LjAuMA..') 
+        await expect(this.developersDevDocsSubMenuItem.parentElement().parentElement()).toHaveHref('https://developers.telnyx.com');
     }
    
     // Dev Community
     async haveUrlDevelopersDevCommunitySubMenuItem(){
-        await expect(this.developersDevCommunitySubMenuItem).toHaveAttribute('href', 'https://community.telnyx.com') 
+        await expect(this.developersDevCommunitySubMenuItem.parentElement().parentElement()).toHaveAttribute('href', 'https://community.telnyx.com'); 
     }
    
 }
