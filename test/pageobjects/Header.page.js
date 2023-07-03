@@ -23,11 +23,11 @@ class HeaderPage extends Page {
 
     // Products
     get productsMenuItem(){
-        return $('//header/div/div/div/nav//button/div/span[text()="Products"]');
+        return $('//header/div/div/div/nav//button/div/span/span[text()="Products"]');
     }
 
     get productsSIPTrunkingSubMenuItem(){
-        return $('//header/div/div/div/nav/div//a/span[text()="SIP Trunking"]');
+        return $('//header/div/div/div/nav/div//a/span/span[text()="SIP Trunking"]');
     }
 
     get productSubBlock(){
@@ -36,11 +36,11 @@ class HeaderPage extends Page {
 
     // Pricing
     get pricingLinkMenuItem(){
-        return $('//header/div/div/div/nav//button/div/span[text()="Pricing"]');
+        return $('//header/div/div/div/nav//button/div/span/span[text()="Pricing"]');
     }
 
     get pricingSIPTrunkingSubMenuItem(){
-        return $('//header/div/div/div/nav//a/span[text()="SIP Trunking"]');
+        return $('//header/div/div/div/nav//a/span/span[text()="SIP Trunking"]');
     }
 
     get pricingSubBlock(){
@@ -50,17 +50,17 @@ class HeaderPage extends Page {
     // Solutions
 
     get solutionsMenuItem(){
-        return $('//nav/a/span[contains(text(), "Solutions")]');
+        return $('//nav/a/span/span[contains(text(), "Solutions")]');
     }
 
     // Why Telnyx
 
     get whyTelnyxMenuItem(){
-        return $('//header/div/div/div/nav//button/div/span[text()="Why Telnyx"]');
+        return $('//header/div/div/div/nav//button/div/span/span[text()="Why Telnyx"]');
     }    
 
     get partnersWhyTelnyxSubMenuItem(){
-        return $('//header/div/div/div/nav//a/span[text()="Partners"]');
+        return $('//header/div/div/div/nav//a/span/span[text()="Partners"]');
     }
 
     get partnersSubBLock(){
@@ -125,9 +125,6 @@ class HeaderPage extends Page {
         await this.partnersSubBLock.isExisting();
     }
 
-    /*open () {
-        return super.open('');
-    }*/
 }
 
 export default new HeaderPage();
