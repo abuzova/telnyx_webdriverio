@@ -10,10 +10,10 @@
     "second_block": {
             "title": "Contact support",
             "description": "Log in to our Mission Control Portal to chat with our 24-7 technical support or visit our support center for other technical questions.",
-            "link_1": "https://portal.telnyx.com/?_gl=1*1xjagfv*_ga*MTgyMDI4MzY4LjE2NzUwNjc5MTU.*_ga_ZPM4K1DLND*MTY4ODEzNTA0Mi4yMTcuMS4xNjg4MTM1OTY5LjQ4LjAuMA..",
+            "link_1": "https://portal.telnyx.com/",
             "link_2": "https://support.telnyx.com/en/",
             "button_title": "LOG IN",
-            "button_attribute": "https://portal.telnyx.com/?_gl=1*1teu14v*_ga*MTgyMDI4MzY4LjE2NzUwNjc5MTU.*_ga_ZPM4K1DLND*MTY4ODEzNTA0Mi4yMTcuMS4xNjg4MTM1OTY5LjQ4LjAuMA.."  
+            "button_attribute": "https://portal.telnyx.com/"  
     },
     "third_block": {
             "title": "Report abuse",
