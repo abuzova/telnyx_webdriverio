@@ -27,7 +27,15 @@ class RelatedResourcesPage extends Page {
     }
     get link_2FirstBlock(){
         return $('ul li[title="Contact us related resources 1"] p>a:nth-child(2)');
-    }   
+    } 
+    
+    get mailtoLinkFirstBlock(){
+        return $('//ul/li[@title="Contact us related resources 1"]//h3/following-sibling::p/a//span[contains(text(), "sales@telnyx.com")]');
+    }
+
+    get telLinkFirstBlock(){
+        return $('//ul/li[@title="Contact us related resources 1"]//h3/following-sibling::p/a//span[contains(text(), "+1 (888) 980-9750")]');
+    }
 
     // Second block
 
@@ -49,6 +57,14 @@ class RelatedResourcesPage extends Page {
         return $('ul li[title="Contact us related resources 2"] p>a:nth-child(2)');
     } 
 
+    get missionControlPortalSecondBlock(){
+        return $('//ul/li[@title="Contact us related resources 2"]//h3/following-sibling::p/a//span[contains(text(), "Mission Control Portal")]');
+    }
+
+    get supportCenterSecondBlock(){
+        return $('//ul/li[@title="Contact us related resources 2"]//h3/following-sibling::p/a//span[contains(text(), "support center")]');
+    }
+
 
     // Third block     
   
@@ -64,9 +80,13 @@ class RelatedResourcesPage extends Page {
         return $('ul li[title="Contact us related resources 3"]>div>div>a');
     } 
 
-     get link_1ThirdBlock() {
+    get link_1ThirdBlock() {
         return $('ul li[title="Contact us related resources 3"] p>a:nth-child(1)');
-    } 
+    }
+    
+    get reportAbuseThirdBlock(){
+        return $('//ul/li[@title="Contact us related resources 3"]//h3/following-sibling::p/a//span[contains(text(), "Report Abuse")]');
+    }  
 
    
     // First block 
@@ -83,16 +103,16 @@ class RelatedResourcesPage extends Page {
         await expect(this.buttonFirstBlock).toHaveText(relatedResourcesData.first_block.button_title);
     }
 
-    async haveAttrLinkFirstBlock(){        
+    async haveAttrButtonFirstBlock(){        
         await expect(this.buttonFirstBlock).toHaveAttrContaining('href', relatedResourcesData.first_block.button_attribute);
     }
 
-    async haveAttrLink_1FirstBlock(){        
-        await expect(this.link_1FirstBlock).toHaveAttrContaining('href', relatedResourcesData.first_block.link_1);
+    async haveAttrMailToLinkFirstBlock(){        
+        await expect(this.mailtoLinkFirstBlock.parentElement().parentElement()).toHaveAttrContaining('href', relatedResourcesData.first_block.mail_link);
     }
 
-    async haveAttrLink_2FirstBlock(){        
-        await expect(this.link_2FirstBlock).toHaveAttrContaining('href', relatedResourcesData.first_block.link_2);
+    async haveAttrTelLinkFirstBlock(){        
+        await expect(this.telLinkFirstBlock.parentElement().parentElement()).toHaveAttrContaining('href', relatedResourcesData.first_block.tel);
     }
 
 
@@ -110,17 +130,18 @@ class RelatedResourcesPage extends Page {
         await expect(this.buttonSecondBlock).toHaveText(relatedResourcesData.second_block.button_title);
     }
 
-    async haveAttrLinkSecondBlock(){        
+    async haveAttrButtonSecondBlock(){        
         await expect(this.buttonSecondBlock).toHaveAttrContaining('href', relatedResourcesData.second_block.button_attribute);
     }
 
-    async haveAttrLink_1SecondBlock(){        
-        await expect(this.link_1SecondBlock).toHaveAttrContaining('href', relatedResourcesData.second_block.link_1);
+    async haveAttrMissionControlPortalLinkSecondBlock(){        
+        await expect(this.missionControlPortalSecondBlock.parentElement().parentElement()).toHaveAttrContaining('href', relatedResourcesData.second_block.mission_control_portal_link);
     }
 
-    async haveAttrLink_2SecondBlock(){        
-        await expect(this.link_2SecondBlock).toHaveAttrContaining('href', relatedResourcesData.second_block.link_2);
+    async haveAttrSupportCenterLinkSecondBlock(){        
+        await expect(this.supportCenterSecondBlock.parentElement().parentElement()).toHaveAttrContaining('href', relatedResourcesData.second_block.support_center_link);
     }
+
 
     // Third block
 
@@ -136,14 +157,15 @@ class RelatedResourcesPage extends Page {
         await expect(this.buttonThirdBlock).toHaveText(relatedResourcesData.third_block.button_title);
     }    
 
-    async haveAttrLinkThirdBlock(){        
+    async haveAttrButtonThirdBlock(){        
         await expect(this.buttonThirdBlock).toHaveAttrContaining('href', relatedResourcesData.third_block.button_attribute);
     }
     
-    async haveAttrLink_1ThirdBlock(){        
-        await expect(this.link_1ThirdBlock).toHaveAttrContaining('href', relatedResourcesData.third_block.link_1);
+    async haveAttrReportAbuseLinkThirdBlock(){        
+        await expect(this.reportAbuseThirdBlock.parentElement().parentElement()).toHaveAttrContaining('href', relatedResourcesData.third_block.report_abuse_page);
     }
 
+ 
 }
 
 export default new RelatedResourcesPage();

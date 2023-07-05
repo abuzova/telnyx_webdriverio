@@ -14,26 +14,21 @@ describe('My Login application', () => {
         await HeaderPage.clickContactUsLink();
 
         await RelatedResourcesPage.haveTitleFirstBlock();
-        //await RelatedResourcesPage.haveDescriptionFirstBlock();
         await RelatedResourcesPage.haveTextLinkFirstBlock();
-        await RelatedResourcesPage.haveAttrLinkFirstBlock();
-        await RelatedResourcesPage.haveAttrLink_1FirstBlock();
-        await RelatedResourcesPage.haveAttrLink_2FirstBlock(); 
+        await RelatedResourcesPage.haveAttrButtonFirstBlock();
+        await RelatedResourcesPage.haveAttrMailToLinkFirstBlock();
+        await RelatedResourcesPage.haveAttrTelLinkFirstBlock(); 
 
-
-        await RelatedResourcesPage.haveTitleSecondBlock();
-        //await RelatedResourcesPage.haveDescriptionSecondBlock();
+        await RelatedResourcesPage.haveTitleSecondBlock();       
         await RelatedResourcesPage.haveTextLinkSecondBlock();
-        await RelatedResourcesPage.haveAttrLinkSecondBlock();
-        //await RelatedResourcesPage.haveAttrLink_1SecondBlock();
-        await RelatedResourcesPage.haveAttrLink_2SecondBlock();
+        await RelatedResourcesPage.haveAttrButtonSecondBlock();
+        await RelatedResourcesPage.haveAttrMissionControlPortalLinkSecondBlock();
+        await RelatedResourcesPage.haveAttrSupportCenterLinkSecondBlock(); 
 
-
-        await RelatedResourcesPage.haveTitleThirdBlock();
-        //await RelatedResourcesPage.haveDescriptionThirdBlock();
+        await RelatedResourcesPage.haveTitleThirdBlock();        
         await RelatedResourcesPage.haveTextLinkThirdBlock();
-        await RelatedResourcesPage.haveAttrLinkThirdBlock();
-        await RelatedResourcesPage.haveAttrLink_1ThirdBlock();      
+        await RelatedResourcesPage.haveAttrButtonThirdBlock();
+        await RelatedResourcesPage.haveAttrReportAbuseLinkThirdBlock();              
        
     })
 })
