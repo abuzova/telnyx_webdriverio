@@ -1,0 +1,6 @@
+{
+  "script": "return (function() { // Arrow function is not allowed here.\r\n            // this is Window https://developer.mozilla.org/en-US/docs/Web/API/Window\r\n            // TypeScript users may do something like this\r\n            // return (this as Window).document.querySelectorAll('#menu')\r\n            return document.querySelectorAll('footer div:nth-child(1) div:nth-child(2) ul li:nth-child(1) a'); // Element[]\r\n        }).apply(null, arguments)",
+  "args": [
+    null
+  ]
+}
