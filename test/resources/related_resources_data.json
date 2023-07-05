@@ -1,0 +1,25 @@
+{
+    "first_block": {
+        "title": "Talk to a product expert",
+        "description": "Email us at sales@telnyx.com or call us at +1 (888) 980-9750.",
+        "button_title": "EMAIL SALES",
+        "button_attribute": "mailto:sales@telnyx.com",
+        "mail_link": "mailto:sales@telnyx.com",
+        "tel": "tel:+18889809750"
+    },
+    "second_block": {
+        "title": "Contact support",
+        "description": "Log in to our Mission Control Portal to chat with our 24-7 technical support or visit our support center for other technical questions.",
+        "button_title": "LOG IN",
+        "button_attribute": "https://portal.telnyx.com/",
+        "mission_control_portal_link": "https://portal.telnyx.com/",
+        "support_center_link": "https://support.telnyx.com/en/"  
+    },
+    "third_block": {
+        "title": "Report abuse",
+        "description": "Please report any violation incidents using the Report Abuse form.",
+        "button_title": "REPORT ABUSE",
+        "button_attribute": "https://telnyx.com/report-abuse",
+        "report_abuse_page": "https://telnyx.com/report-abuse"  
+    }
+}
