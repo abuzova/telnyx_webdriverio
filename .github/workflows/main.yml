@@ -1,102 +1,45 @@
-name: Test-Build
+name: WDIO-allure
 on:
-  push:
-    branches:
-      - main
-      
-# Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
-
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
-concurrency:
-  group: "pages"
-  cancel-in-progress: false 
-      
-      
+push:
+    branches: [ main, master ]
+pull_request:
+    branches: [ main, master ]
 jobs:
- websites-tests:
-    runs-on: ubuntu-latest          
-          
-    steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v3
-
-
-      # INstall Node on the runner
-      - name: Install Node
-        uses: actions/setup-node@v3
-        with:
-          node-version: "18.x"
-      - run: npm i npm@latest
-      - run: npm i
-      
-
-      # Install the newman command line utility and also install the html extra reporter
-      #- name: Install newman
-      #  run: |
-      #    npm install -g newman
-      #    npm install -g newman-reporter-htmlextra
-
-      # We install necessary drivers so we can run our tests
-      - name: Install Chromium
-        run: sudo apt-get install chromium-browser
-      # We need to checkout current branch
-      #- uses: actions/checkout@v2
-      # As it's a NodeJS project, we need to setup NodeJS into our enviornement
-      #- name: Use Node.js
-      #  uses: actions/setup-node@v1
-      #  with:
-      #    node-version: 18.x
-      # We did not check node_modules directory to GitHub so we need to install dependencies
-      #- run: npm install
-      #  name: Install dependencies
-      # We execute our test execution command
-      #- run: npx wdio test/wdio.conf.ts
-      # name: Running E2E tests
-
-      # Install webdriver.io
-      #- name: Install webdriver.io
-      #  run: npm init wdio ./telnux_webdriverio
-
-      # Install allure webdriverIO package from npm
-      - name: Install allure webdriverIO package from npm
-        run: npm install @wdio/allure-reporter --save-dev
-
-      # Install Allure-reporter
-      - name: Install Allure-reporter
-        run: npm i allure-commandline
-
-      # Run webdriver.io
-      - name: Run webdriver.io
-        run: npm run wdio 
-        # run: BROWSERSTACK_USERNAME=${{secrets.BROWSERSTACK_USERNAME}} BROWSERSTACK_ACCESS_KEY=${{secrets.BROWSERSTACK_ACCESS_KEY}} npm run test
-
-      # Run Allure-reporter
-      - name: Run Allure-reporter
-        run: npm run allurereport
-     
-          
-      # Upload the contents of Test Results directory to workspace
-      - name: Output the run Details
-        uses: actions/upload-pages-artifact@v1
-        with:
-          # Upload entire repository
-          path: '.'
-          
- deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+test:
+    timeout-minutes: 60
     runs-on: ubuntu-latest
-    needs: websites-tests
     steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v2
+    - uses: actions/checkout@v2                     # clone repo to the machine
+    - uses: actions/setup-node@v2                   # install nodeJS
+    with:
+        node-version: '14.x'
+    - name: Install dependencies                    # install dependencies from package-lock.json
+    run: npm ci
+    - name: Run WDIO test chrome                    # start tests
+    run: npm run test:chrome:headless
+    - uses: actions/checkout@v2                     # clone branch with report to current branch
+    if: always()
+    with:
+        repository: nameOfUser/repository
+        ref: allure-chrome-report
+        path: ./allure-report
+    - name: Copy History                            # copy history from allure-report to allure-result
+    if: always()
+    run: npm run allure:copy:history
+    - name: Generate Allure Report                  # generate allure report
+    if: always()
+    run: npm run allure:generate
+    - uses: actions/upload-artifact@v2              # upload allure report as an artifact of this run
+    if: always()
+    with:
+        name: allure-chrome-report
+        path: allure-report/
+        retention-days: 30
+    - name: Push Build To Other Branch              # push this report to the other branch
+        uses: s0/git-publish-subdir-action@develop
+        env:
+        REPO: self
+        BRANCH: report # The branch name where you want to push the assets
+        FOLDER: allure-report # The directory where your assets are generated
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # GitHub will automatically add this - you don't need to bother getting a token
+        MESSAGE: "Build: ({sha}) {msg}" # The commit message
