@@ -1,47 +1,10 @@
----
-name: WDIO-allure
-on:
-push:
-    branches: [ main, master ]
-pull_request:
-    branches: [ main, master ]
-jobs:
-test:
-    timeout-minutes: 60
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2                     # clone repo to the machine
-    - uses: actions/setup-node@v2                   # install nodeJS
-    with:
-        - node-version: '14.x'
-    - name: Install dependencies                    # install dependencies from package-lock.json
-    run: npm ci
-    - name: Run WDIO test chrome                    # start tests
-    run: npm run test:chrome:headless
-    - uses: actions/checkout@v2                     # clone branch with report to current branch
-    if: always()
-    with:
-        repository: nameOfUser/repository
-        ref: allure-chrome-report
-        path: ./allure-report
-    - name: Copy History                            # copy history from allure-report to allure-result
-    if: always()
-    run: npm run allure:copy:history
-    - name: Generate Allure Report                  # generate allure report
-    if: always()
-    run: npm run allure:generate
-    - uses: actions/upload-artifact@v2              # upload allure report as an artifact of this run
-    if: always()
-    with:
-        name: allure-chrome-report
-        path: allure-report/
-        retention-days: 30
-    - name: Push Build To Other Branch              # push this report to the other branch
-        uses: s0/git-publish-subdir-action@develop
-        env:
-        REPO: self
-        BRANCH: report # The branch name where you want to push the assets
-        FOLDER: allure-report # The directory where your assets are generated
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # GitHub will automatically add this - you don't need to bother getting a token
-        MESSAGE: "Build: ({sha}) {msg}" # The commit message
-...
+name: Print workflow #Название workflow
+on: workflow_dispatch #Триггер, который будет вызывать workflow
+
+jobs: #Начало секции джобов
+  print_hello: #Название джоба
+    runs-on: ubuntu-latest #Среда выполнения джоба
+    
+    steps: #Начало секции шагов
+      - name: Print hello #Название шага
+        run: echo "Hello world!" #Команда, которая будет выполнена в терминале
