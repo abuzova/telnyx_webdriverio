@@ -1,3 +1,4 @@
+---
 name: WDIO-allure
 on:
 push:
@@ -12,7 +13,7 @@ test:
     - uses: actions/checkout@v2                     # clone repo to the machine
     - uses: actions/setup-node@v2                   # install nodeJS
     with:
-        node-version: '14.x'
+        - node-version: '14.x'
     - name: Install dependencies                    # install dependencies from package-lock.json
     run: npm ci
     - name: Run WDIO test chrome                    # start tests
@@ -43,3 +44,4 @@ test:
         FOLDER: allure-report # The directory where your assets are generated
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # GitHub will automatically add this - you don't need to bother getting a token
         MESSAGE: "Build: ({sha}) {msg}" # The commit message
+...
