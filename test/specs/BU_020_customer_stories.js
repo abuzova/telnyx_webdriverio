@@ -11,7 +11,7 @@ describe('My Login application', () => {
     })
 
     it('Checking "Read about what our customers are building" block content', async () => {
-        await HeaderPage.clickResourcesLinkMenuItem();
+        await HeaderPage.clickResourcesMenuItem();
         await HeaderPage.clickCustomerStoriesResourcesSubMenuItem();
 
         await CustomerStoriesPage.haveUpmarketLink();    
@@ -30,3 +30,5 @@ describe('My Login application', () => {
         await CustomerStoriesPage.haveTalentifyLink(); 
     })
 })
+
+// //"wdio": "wdio run ./wdio.conf.js",

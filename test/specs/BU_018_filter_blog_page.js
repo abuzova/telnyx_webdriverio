@@ -11,7 +11,7 @@ describe('My Login application', () => {
     })
 
     it('Testing the filter of the Blog page', async () => {
-        await HeaderPage.clickResourcesLinkMenuItem();
+        await HeaderPage.clickResourcesMenuItem();
         await HeaderPage.clickBlogResourcesSubMenuItem();
 
         await ResoucesPage.filterButton.scrollIntoView({ block: 'center', inline: 'center' });

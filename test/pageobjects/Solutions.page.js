@@ -1,5 +1,5 @@
 import Page from './Page.js';
-import formdata from '../resources/how_it_works_solutions.json' assert { type : "json" }
+import formdata from '../resources/howItWorksSolutions.json' assert { type : "json" }
 
 
 /**

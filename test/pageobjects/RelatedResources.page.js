@@ -1,5 +1,5 @@
 import Page from './Page.js';
-import relatedResourcesData from '../resources/related_resources_data.json' assert { type : "json" }
+import relatedResourcesData from '../resources/relatedResourcesData.json' assert { type : "json" }
 
 /**
  * sub page containing specific selectors and methods for a specific page

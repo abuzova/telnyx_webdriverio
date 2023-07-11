@@ -149,7 +149,7 @@ class HeaderPage extends Page {
     }
 
     get missionControlWhyTelnyxSubMenuItem(){
-        return $('//header/div/div/div/nav//a/span[text()="Mission Control"]');
+        return $('//header/div/div/div/nav//a/span/span[text()="Mission Control"]');
     }
 
     get whyTelnyxSubBLock(){
@@ -164,11 +164,11 @@ class HeaderPage extends Page {
     }
 
     get blogResourcesSubMenuItem(){
-        return $('//header/div/div/div/nav//a/span[text()="Blog"]');
+        return $('//header/div/div/div/nav//a/span/span[text()="Blog"]');
     }
 
     get customerStoriesResourcesSubMenuItem(){
-        return $('//header/div/div/div/nav//a/span[text()="Customer Stories"]/parent::a');
+        return $('//header/div/div/div/nav//a/span/span[text()="Customer Stories"]/parent::span/parent::a ');
     }
 
     get resourcesSubBlock(){
@@ -364,22 +364,11 @@ class HeaderPage extends Page {
         await this.pricingSIPTrunkingSubMenuItem.click();
         await expect(browser).toHaveUrlContaining('/pricing/elastic-sip'); 
     } 
-
-    // Pricing
-    /*async clickPricingLinkMenuItem(){
-        await this.pricingLinkMenuItem.click();
-        await this.pricingSubBlock.isExisting();
-    }
-
-    async clickPricingSIPTrunkingSubMenuItem(){
-        await this.pricingSIPTrunkingSubMenuItem.click();
-        await expect(browser).toHaveUrlContaining('/pricing/elastic-sip'); 
-    } 
     
     async clickPricingSeeAllPricingSubMenuItem(){
         await this.pricingSeeAllPricingSubMenuItem.click();
         await expect(browser).toHaveUrlContaining('/pricing'); 
-    }*/
+    }
 
     // Have href Pricing
     // Messaging API
@@ -420,7 +409,7 @@ class HeaderPage extends Page {
 
     // Why Telnyx
     async clickPartnersWhyTelnyxSubMenuItem(){
-        await this.partnersWhyTelnyxSubMenuItem.click();
+        await this.whyTelnyxPartnersSubMenuItem.click();
         await expect(browser).toHaveUrlContaining('/partnerships'); 
     }
 
@@ -429,14 +418,6 @@ class HeaderPage extends Page {
         await this.missionControlWhyTelnyxSubMenuItem.click();
         await expect(browser).toHaveUrlContaining('/mission-control');
     }
-
-    async clickWhyTelnyxLinkMenuItem(){
-        await this.whyTelnyxMenuItem.click();
-        await this.whyTelnyxSubBLock.isExisting();
-    }
-
-  
-
 
     async clickWhyTelnyxLinkMenuItem(){
         await this.whyTelnyxMenuItem.click();
@@ -460,7 +441,7 @@ class HeaderPage extends Page {
     }
    
     // Partners
-    async haveUrlWhyTelnyxPartnersSubMenuItem(){
+    async haveUrlWhyTelnyxPartnersSubMenuItem(){ 
         await expect(this.whyTelnyxPartnersSubMenuItem.parentElement().parentElement()).toHaveAttribute('href', '/partnerships') 
     }   
         
@@ -486,17 +467,10 @@ class HeaderPage extends Page {
         await expect(browser).toHaveUrlContaining('/customer-stories'); 
     }
 
-    async clickResourcesLinkMenuItem(){
+    async clickResourcesMenuItem(){
         await this.resourcesMenuItem.click();
         await this.resourcesSubBlock.isExisting();
     }
-
-
-    // Resources     
-   /* async clickResourcesMenuItem(){
-        await this.resourcesMenuItem.click();
-        await this.resourcesSubBlock.isExisting();
-    }   */
 
     // Have href Resources  
 
@@ -536,5 +510,3 @@ class HeaderPage extends Page {
 }
 
 export default new HeaderPage();
-
-

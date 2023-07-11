@@ -10,7 +10,7 @@ describe('My Login application', () => {
     })
 
     it('Verify "Become a Telnyx partner" form with valid credentials', async () => {
-        await HeaderPage.clickPartnersLinkMenuItem();
+        await HeaderPage.clickWhyTelnyxLinkMenuItem();
         await HeaderPage.clickPartnersWhyTelnyxSubMenuItem();
 
         await PartnershipsPage.setFirstName(Constants.FIRST_NAME);

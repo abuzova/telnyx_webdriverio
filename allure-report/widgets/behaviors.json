@@ -1,1 +1,1 @@
-{"total":1,"items":[{"uid":"1e569911a0dd59e08749749da60112c5","name":"My Login application","statistic":{"failed":0,"broken":0,"skipped":0,"passed":2,"unknown":0,"total":2}}]}
+{"total":2,"items":[{"uid":"1e569911a0dd59e08749749da60112c5","name":"My Login application","statistic":{"failed":7,"broken":8,"skipped":0,"passed":34,"unknown":1,"total":50}},{"uid":"a1b183c491352a53ad0891ad7b539deb","name":"Checking correct the Footer menu work","statistic":{"failed":0,"broken":0,"skipped":0,"passed":5,"unknown":0,"total":5}}]}

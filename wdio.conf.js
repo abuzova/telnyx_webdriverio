@@ -46,7 +46,7 @@ export const config = {
     // from the same test should run tests.
     //
     //maxInstances: 10,
-    maxInstances: 20,
+    maxInstances: 1,
     //
     // If you have trouble getting all important capabilities together, check out the
     // Sauce Labs platform configurator - a great tool to configure your capabilities:
@@ -141,9 +141,15 @@ export const config = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter
-    reporters: ['spec',['allure', {
+    /*reporters: ['spec',['allure', {
         outputDir: 'allure-results',
         disableWebdriverStepsReporting: false,
+        disableWebdriverScreenshotsReporting: false,
+    }]],*/
+
+    reporters: [['allure', {
+        outputDir: 'allure-results',
+        disableWebdriverStepsReporting: true,
         disableWebdriverScreenshotsReporting: false,
     }]],
 
@@ -153,6 +159,8 @@ export const config = {
     // See the full list at http://mochajs.org/
     mochaOpts: {
         ui: 'bdd',
+        // timeout: 60000
+        //timeout: 1000000
         timeout: 60000
     },
     //

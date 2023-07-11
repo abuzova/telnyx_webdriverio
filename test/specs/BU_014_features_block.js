@@ -1,7 +1,5 @@
 import VoiceApiProductsPage from '../pageobjects/VoiceApiProducts.page.js';
 import HeaderPage from '../pageobjects/Header.page.js';
-// import Constants from '';
-// import formdata from '../resources/articleData.json' assert { type : "json" }
 
 
 describe('My Login application', () => {

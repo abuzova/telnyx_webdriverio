@@ -13,7 +13,7 @@ describe('My Login application', () => {
     })
 
     it('Verify "2023 SMS Deliverability eBook" form with valid credentials', async () => {
-        await HeaderPage.clickResourcesLinkMenuItem();
+        await HeaderPage.clickResourcesMenuItem();
         await HeaderPage.clickBlogResourcesSubMenuItem();
         await BlogPage.clickGoNextPageArrow();
         await expect(browser).toHaveUrlContaining('https://telnyx.com/resources/page');

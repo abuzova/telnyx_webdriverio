@@ -1,0 +1,4 @@
+{
+  "using": "css selector",
+  "value": "div button[type=\"button\"] svg[aria-describedby=\"close\"]"
+}

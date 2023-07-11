@@ -1,0 +1,4 @@
+{
+  "using": "xpath",
+  "value": "//footer//ul/li/a[contains(text(), \"Terms and conditions of service\")]"
+}

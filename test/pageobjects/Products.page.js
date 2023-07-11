@@ -11,7 +11,7 @@ class ProductsPage extends Page {
     // Communications
 
     get communicationsBlock(){
-        return $('//h2[contains(text(), "Communications")]');
+        return $('//h2[contains(text(), "Communications")]/ancestor::section');
     }
 
     // Communications -> MESSAGING 

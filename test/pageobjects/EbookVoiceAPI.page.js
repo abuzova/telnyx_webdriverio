@@ -10,7 +10,7 @@ class EbookVoiceAPIPage extends Page {
 
     // DownloadEbook button
     get downloadEbookLink() {
-        return $('//ul/li/div/div/a/span[contains(text(), "Download ebook")]');
+        return $('//ul/li/div/div/a/span/span[contains(text(), "Download ebook")]');
     }    
    
     // Download Your Voice API eBook
