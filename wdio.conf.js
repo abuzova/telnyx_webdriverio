@@ -1,3 +1,16 @@
+const Telnyx = "https://telnyx.com/";
+const Wiki = "https://en.wikipedia.org/";
+
+let appbaseUrl = "";
+
+if(process.env.NODE_ENV == 'DEV'){ appbaseUrl = Telnyx; }
+else if(process.env.NODE_ENV == 'QA'){ appbaseUrl = Wiki; }
+else{
+    console.log('Please pass correct NODE_ENV variable:: DEV | QA');
+    process.exit();
+}
+
+
 export const config = {
     //
     // ====================
@@ -103,7 +116,7 @@ export const config = {
     // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
     // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
     // gets prepended directly.
-    baseUrl: 'https://telnyx.com/',
+    baseUrl: appbaseUrl,
     //
     // Default timeout for all waitFor* commands.
     waitforTimeout: 10000,
